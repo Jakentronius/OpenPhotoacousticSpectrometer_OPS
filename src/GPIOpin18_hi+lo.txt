@@ -1,0 +1,26 @@
+/*
+This code sets pin 18, GPIO, of an ESP-32 to High and Low on a duty cycle set by delay below.
+The code is not optimal, heck it's barely functional, but it works well enough to drive the gate-pin of a MOSFET to gate larger loads.
+
+
+Said code was used to gate a N-Channel MOSFET 60V 30A, specifically the FQP30N06L 60V LOGIC N-Channel MOSFET from Sparkfun
+
+*/
+
+// the setup function runs once when you press reset or power the board
+
+
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(18, OUTPUT); // GPIO as output;
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  
+  digitalWrite(18,HIGH);
+  delay(600); 
+  digitalWrite(18,LOW);   // turn the LED on (HIGH is the voltage level)
+  delay(60);                       // wait for a second
+                    // wait for a micro
+}
